@@ -10,13 +10,6 @@ ARG SERVICE_FQDN_LISTMONK
 ARG SERVICE_PASSWORD_POSTGRES
 ARG SERVICE_USER_POSTGRES
 
-ARG LISTMONK_app__address
-ARG LISTMONK_db__host
-ARG LISTMONK_db__port
-ARG LISTMONK_db__user
-ARG LISTMONK_db__password
-ARG LISTMONK_db__database
-
 
 RUN apk add --no-cache parallel openssl
 
