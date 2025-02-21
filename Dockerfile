@@ -4,7 +4,7 @@ COPY Caddyfile ./
 
 RUN caddy fmt --overwrite Caddyfile
 
-ENV LISTMONK_app__address=0.0.0.0:9000
+ENV LISTMONK_app__address="127.0.0.0:9000"
 
 FROM listmonk/listmonk:latest
 
