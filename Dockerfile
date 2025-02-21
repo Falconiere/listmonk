@@ -8,7 +8,8 @@ FROM listmonk/listmonk:latest
 
 RUN apk add --no-cache parallel openssl
 
-ENV SERVICE_USER_POSTGRES;
+ARG SERVICE_USER_POSTGRES;
+ENV SERVICE_USER_POSTGRES=$SERVICE_USER_POSTGRES
 
 COPY --from=caddy /srv/Caddyfile ./
 COPY --from=caddy /usr/bin/caddy /usr/bin/caddy
