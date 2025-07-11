@@ -14,6 +14,8 @@ COPY --from=caddy /srv/Caddyfile ./
 COPY --from=caddy /usr/bin/caddy /usr/bin/caddy
 
 COPY --chmod=755 scripts/* ./
+# Expose the application port
+EXPOSE 9000
 
 ENTRYPOINT ["/bin/sh"]
 
